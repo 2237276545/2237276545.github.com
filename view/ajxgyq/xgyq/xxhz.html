@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+    <link href="../../../dist/qtys/ajgl_style/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../dist/qtys/ajgl_style/css/ace.min.css" />
+    <link rel="stylesheet" href="../../../dist/qtys/ajgl_style/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="../../../dist/qtys/ajgl_style/css/style.css" />
+    <link rel="stylesheet" href="../../../dist/layui/css/layui.css" />
+
+    <!--文章列表样式 bootstrap css-->
+    <link type="text/css" rel="stylesheet" href="../../../dist/qtys/ajgl_style/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../../../dist/qtys/ajgl_style/css/main.css">
+    <link type="text/css" rel="stylesheet" href="../../../dist/qtys/ajgl_style/css/jplist-custom.css">
+
+    <script src="../../../dist/qtys/ajgl_style/js/jquery.min.js"></script>
+    <script src="../../../dist/qtys/ajgl_style/js/jquery.dataTables.min.js"></script>
+    <script src="../../../dist/layui/layui.js"></script>
+
+    <title>用户列表</title>
+
+</head>
+
+<body>
+    <div class="page-content clearfix" style="background-color:#f2f2f2">
+        <div id="Member_Ratings">
+            <div class="d_Confirm_Order_style">
+
+                <!-- 中部批量删除按钮-->
+                <div class="border clearfix">
+                    <span class="l_f">谁诉讼谁---------内容</span>
+                </div>
+                <!--中部批量删除按钮 end-->
+                <blockquote class="layui-elem-quote quoteBox" style="margin-top: 10px;background-color: #e2e2e2">
+
+                    <div>
+
+                        <p>
+                            <label class="find_labela" style="color: black;font-weight: bold">媒体平台：</label>
+                            <select class="find_input">
+                                <option>微信</option>
+                                <option>微博</option>
+                                <option>--</option>
+                            </select>
+                            <label class="find_labela" style="color: black;font-weight: bold">情感属性：</label>
+                            <select class="find_input">
+                                <option>正面</option>
+                                <option>中性</option>
+                                <option>负面</option>
+                            </select>
+                            <label class="find_labela" style="color: black;font-weight: bold">案件名称：</label>
+                            <input type="text" class="find_input">
+                            <input type="button" value="搜索一下" class="layui-btn search_btn" id="but_open">
+                            <input type="button" value="重置" class="layui-btn layui-btn-normal" id="but_close02">
+
+                        </p>
+
+                    </div>
+                </blockquote>
+
+                <!--table文章列表-->
+                <div class="panel-body" style="margin-top: -30px">
+
+                    <div class="box text-shadow">
+                        <table class="demo-tbl">
+                            <!--<item>1</item>-->
+                            <tr class="tbl-item">
+                                <!--<img/>-->
+                                <td>
+
+                                    <input type="checkbox">
+
+                                </td>
+                                <!--<data></data>-->
+                                <td class="td-block">
+
+                                    <p> <a class="showxq" onclick="ckxq()" href="javascript:;">查看详情>></a></p>
+                                    <p class="title"><a class="btys" href="https://weibo.com/ttarticle/p/show?id=2309351000884371640652836131" target="_blank"><button class="layui-btn
+                                     layui-btn-sm layui-btn-normal">正面</button>从C位出道到全网齐黑，怼DNF刚苹果，ikun是如何让蔡徐坤崩溃的？</a></p>
+
+                                    <p class="desc">篮球火起来，反而因为粉丝带出的各种节奏被全网所黑几近崩溃。ikun们爆B站刚虎扑、怼DNF战剑网3、甚至在微博也有他们横行霸道的身影...</p>
+
+
+                                    <p class="like">来源：微博 <a class="kzzt">快照</a>
+                                        <font class="date">03/15/2012</font>
+                                    </p>
+
+
+                                </td>
+                            </tr>
+                            <!--<item>2</item>-->
+                            <tr class="tbl-item">
+                                <!--<img/>-->
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <!--<data></data>-->
+                                <td class="td-block">
+                                    <p> <a class="showxq" onclick="ckxq()" href="javascript:;">查看详情>></a></p>
+
+                                    <p class="title"><a class="btys" href="https://weibo.com/ttarticle/p/show?id=2309351000884371640652836131" target="_blank"><button class="layui-btn
+                                     layui-btn-sm layui-btn-primary">中性</button>由崔永元到菩提达磨,再由权力的游戏到慈悲之爱</a></p>
+
+                                    <p class="desc">看到崔永元微博从2月之后几个月异常没有更新,失联.5月10日再次更新,引起我的一些感受.我对崔永元本身没有太多感受,但是他揭示了转基因食品这件事情让我对他非常感激....</p>
+
+                                    <p class="like">来源：微博 <a class="kzzt">快照</a>
+                                        <font class="date">03/15/2012</font>
+                                    </p>
+                                </td>
+                            </tr>
+                            <!--<item>3</item>-->
+                            <tr class="tbl-item">
+                                <!--<img/>-->
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <!--<data></data>-->
+                                <td class="td-block">
+                                    <p> <a class="showxq" onclick="ckxq()" href="javascript:;">查看详情>></a></p>
+                                    <p class="title"><a class="btys" href="https://weibo.com/ttarticle/p/show?id=2309351000884371640652836131" target="_blank">
+                                            <button class="layui-btn
+                                     layui-btn-sm layui-btn-danger">负面</button>崔永元，你不是一个人在道歉</a></p>
+
+                                    <p class="desc">多月的崔永元，在巨大压力之下，今天终于道歉了。崔永元，你不是一个人在道歉，你是代表广大的人民群众在道歉，你和广大的人民群众都被人给骗了，都被一个叫王林清的人给骗了...</p>
+                                    <p class="like">来源：微博 <a class="kzzt">快照</a>
+                                        <font class="date">03/15/2012</font>
+                                    </p>
+                                </td>
+                            </tr>
+                            <!--<item>4</item>-->
+                            <tr class="tbl-item">
+                                <!--<img/>-->
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <!--<data></data>-->
+                                <td class="td-block">
+                                    <p> <a class="showxq" href="xq.html">查看详情>></a></p>
+                                    <p class="title"><a class="btys" href="https://weibo.com/ttarticle/p/show?id=2309351000884371640652836131" target="_blank"><button class="layui-btn
+                                     layui-btn-sm layui-btn-normal">正面</button>崔永元：最高级的说话，是实话实说（转载）</a></p>
+
+                                    <p class="desc">“小崔”成为家喻户晓的名人。崔永元成就了《实话实说》，《实话实说》也成就了崔永元，“实话实说”融入了他的性格，成为他鲜明的标签。崔永元感慨地说：”这么多年...</p>
+                                    <p class="like">来源：微博 <a class="kzzt">快照</a>
+                                        <font class="date">03/15/2012</font>
+                                    </p>
+                                </td>
+                            </tr>
+                            <!--<item>5</item>-->
+                            <tr class="tbl-item">
+                                <!--<img/>-->
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <!--<data></data>-->
+                                <td class="td-block">
+                                    <p> <a class="showxq" onclick="ckxq()" href="javascript:;">查看详情>></a></p>
+
+                                    <p class="title">
+                                        <a class="btys" href="https://weibo.com/ttarticle/p/show?id=2309351000884371640652836131" target="_blank"><button class="layui-btn
+                                     layui-btn-sm layui-btn-normal">正面</button>范冰冰携妹复出、崔永元被爆坐牢：娱乐圈还有下限吗？！</a>
+                                    </p>
+
+                                    <p class="desc">崔老师失联了，我们能做什么？”“崔老师你去哪了，怎么也不和我们打声招呼。”而在世界的另一处，范冰冰的复出工作有条不紊的运行着...</p>
+                                    <p class="like">来源：微博 <a class="kzzt">快照</a>
+                                        <font class="date">03/15/2012</font>
+                                    </p>
+                                </td>
+                            </tr>
+                            <!--<item>6</item>-->
+                            <tr class="tbl-item">
+                                <!--<img/>-->
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <!--<data></data>-->
+                                <td class="td-block">
+                                    <p> <a class="showxq" onclick="ckxq()" href="javascript:;">查看详情>></a></p>
+
+                                    <p class="title"><a class="btys" href="https://weibo.com/ttarticle/p/show?id=2309351000884371640652836131" target="_blank"><button class="layui-btn
+                                     layui-btn-sm layui-btn-danger">负面</button>罗富强碰瓷崔永元，让老山英雄们情何以堪！</a></p>
+
+                                    <p class="desc">该文指责小崔利用烈士炒作自己，并为其扣上了“抹黑党和政府不作为”的大帽子。此文的作者名叫罗富强，曾任云南某军分区副司令，大校军衔，现己退休。2016年...</p>
+                                    <p class="like">来源：微博 <a class="kzzt">快照</a>
+                                        <font class="date">03/15/2012</font>
+                                    </p>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+<!--table相关设置-->
+
+
+<script src="../../../dist/qtys/ajgl_style/js/jQuery-2.2.0.min.js"></script>
+<script src="../../../dist/qtys/ajgl_style/js/layer/layer.js"></script>
+
+
+<script>
+    /*查看详情*/
+    function ckxq() {
+
+        layer.open({
+            type: 2,
+            title: false,
+            maxmin: false,
+            shadeClose: true, //点击遮罩关闭层
+            shade: 0.8,
+            scrollbar: true,
+            area: ['80%', '80%'],
+            content: 'xq.html',
+            move: true,
+            moveType: 0,
+            moveOut: true,
+            zIndex: layer.zIndex,
+        });
+    }
+
+</script>

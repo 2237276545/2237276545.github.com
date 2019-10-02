@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>home</title>
+
+    <!--网页配置-->
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!--网页样式-->
+    <link rel="stylesheet" href="../../dist/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../dist/css/admin.css" media="all">
+
+</head>
+
+<body>
+    <div class="layui-fluid">
+        <div class="layui-row layui-col-space15">
+
+            <!--body上部内容-->
+            <!--采集数据量-->
+            <div class="layui-col-sm6 layui-col-md3">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        采集数据量
+                        <span class="layui-badge layui-bg-blue dist-badge">总</span>
+                    </div>
+                    <div class="layui-card-body dist-card-list">
+                        <p>当天采集数据量&nbsp;&nbsp;&nbsp;<span class="dist-big-font">9,666</span></p>
+                        <p>
+                            累计采集数据量&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="dist-span-color">88万 <i class="layui-inline layui-icon layui-icon-flag"></i></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--重要舆情案件数-->
+            <div class="layui-col-sm6 layui-col-md3">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        重要舆情案件数
+                        <span class="layui-badge layui-bg-cyan dist-badge">日</span>
+                    </div>
+                    <div class="layui-card-body dist-card-list">
+                        <p class="dist-big-font">33,555</p>
+                        <p>
+                            内容待定
+                            <span class="dist-span-color">10% <i class="layui-inline layui-icon layui-icon-face-smile-b"></i></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 网络热点数-->
+            <div class="layui-col-sm6 layui-col-md3">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        网络热点数
+                        <span class="layui-badge layui-bg-green dist-badge">总</span>
+                    </div>
+                    <div class="layui-card-body dist-card-list">
+
+                        <p class="dist-big-font">999,666</p>
+                        <p>
+                            内容待定
+                            <span class="dist-span-color">*** <i class="layui-inline layui-icon layui-icon-dollar"></i></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 敏感信息数-->
+            <div class="layui-col-sm6 layui-col-md3">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        敏感信息数
+                        <span class="layui-badge layui-bg-orange dist-badge">总</span>
+                    </div>
+                    <div class="layui-card-body dist-card-list">
+
+                        <p class="dist-big-font">66,666</p>
+                        <p>
+                            内容待定
+                            <span class="dist-span-color">15% <i class="layui-inline layui-icon layui-icon-user"></i></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--body上部内容 end-->
+
+            <!--body左侧下部内容-->
+            <div class="layui-col-md8">
+                <div class="layui-row layui-col-space15">
+
+                    <div class="layui-col-md12">
+                        <!--数据概览-->
+                        <div class="layui-card">
+                            <div class="layui-card-header">数据概览</div>
+                            <div class="layui-card-body">
+
+                                <div class="layui-carousel layadmin-carousel layadmin-dataview" data-anim="fade" lay-filter="LAY-index-dataview">
+                                    <div carousel-item id="LAY-index-dataview">
+                                        <div><i class="layui-icon layui-icon-loading1 layadmin-loading"></i></div>
+                                        <div></div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--网络热点+敏感信息-->
+                        <div class="layui-card">
+                            <div class="layui-tab layui-tab-brief layadmin-latestData">
+                                <ul class="layui-tab-title">
+                                    <li class="layui-this">网络热点</li>
+                                    <li>敏感信息</li>
+                                </ul>
+                                <div class="layui-tab-content">
+                                    <div class="layui-tab-item layui-show">
+                                        <table class="layui-table dist-page-table" lay-skin="line">
+                                            <thead>
+                                                <tr>
+                                                    <th width="100px">id</th>
+                                                    <th>内容</th>
+                                                    <th>待定</th>
+                                                    <th>待定</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><span class="first">1</span></td>
+                                                    <td>奔驰漏油</td>
+                                                    <td><span>**</span></td>
+                                                    <td>**</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="second">2</span></td>
+                                                    <td>奔驰漏油</td>
+                                                    <td><span>**</span></td>
+                                                    <td>**</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="third">3</span></td>
+                                                    <td>奔驰漏油</td>
+                                                    <td><i>**</i></td>
+                                                    <td>**</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>奔驰漏油</td>
+                                                    <td><i>**</i></td>
+                                                    <td>**</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>奔驰漏油</td>
+                                                    <td><span>**</span></td>
+                                                    <td>**</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>****</td>
+                                                    <td><i>**</i></td>
+                                                    <td>**</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>****</td>
+                                                    <td><span>**</span></td>
+                                                    <td>**</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="layui-tab-item">
+                                        <table class="layui-table dist-page-table" lay-skin="line">
+                                            <thead>
+                                                <tr>
+                                                    <th width="100px">id</th>
+                                                    <th>内容</th>
+                                                    <th>待定</th>
+                                                    <th>待定</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><span class="first">1</span></td>
+                                                    <td>奔驰漏油</td>
+                                                    <td><span>**</span></td>
+                                                    <td>**</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="second">2</span></td>
+                                                    <td>奔驰漏油</td>
+                                                    <td><span>**</span></td>
+                                                    <td>**</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="third">3</span></td>
+                                                    <td>奔驰漏油</td>
+                                                    <td><i>**</i></td>
+                                                    <td>**</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>**</td>
+                                                    <td>****</td>
+                                                    <td><i>**</i></td>
+                                                    <td>**</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>**</td>
+                                                    <td>****</td>
+                                                    <td><span>**</span></td>
+                                                    <td>**</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>**</td>
+                                                    <td>****</td>
+                                                    <td><i>**</i></td>
+                                                    <td>**</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>**</td>
+                                                    <td>****</td>
+                                                    <td><span>**</span></td>
+                                                    <td>**</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--body左侧下部内容 end-->
+
+            <!--body右侧下部内容-->
+            <div class="layui-col-md4">
+
+                <!--待定内容-->
+                <div class="layui-card">
+                    <div class="layui-card">
+                        <div class="layui-card-header">待定标题</div>
+                        <div class="layui-card-body">
+
+                            <div class="layui-carousel layadmin-carousel layadmin-backlog">
+                                <div carousel-item>
+                                    <ul class="layui-row layui-col-space10">
+                                        <li class="layui-col-xs6">
+                                            <a lay-href="app/content/comment.html" class="layadmin-backlog-body">
+                                                <h3>待定内容</h3>
+                                                <p><cite>66</cite></p>
+                                            </a>
+                                        </li>
+                                        <li class="layui-col-xs6">
+                                            <a lay-href="app/forum/list.html" class="layadmin-backlog-body">
+                                                <h3>待定内容</h3>
+                                                <p><cite>12</cite></p>
+                                            </a>
+                                        </li>
+                                        <li class="layui-col-xs6">
+                                            <a lay-href="template/goodslist.html" class="layadmin-backlog-body">
+                                                <h3>待定内容</h3>
+                                                <p><cite>99</cite></p>
+                                            </a>
+                                        </li>
+                                        <li class="layui-col-xs6">
+                                            <a href="javascript:;" onclick="layer.tips('不跳转', this, {tips: 3});" class="layadmin-backlog-body">
+                                                <h3>待定内容</h3>
+                                                <p><cite>20</cite></p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="layui-row layui-col-space10">
+                                        <li class="layui-col-xs6">
+                                            <a href="javascript:;" class="layadmin-backlog-body">
+                                                <h3>待定内容</h3>
+                                                <p><cite style="color: #FF5722;">5</cite></p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--重点舆情案件数-->
+                <div class="layui-card">
+
+                    <div class="layui-card">
+                        <div class="layui-card-header">重点关注案件</div>
+                        <div class="layui-card-body">
+                            <table class="layui-table dist-page-table" lay-skin="line">
+                                <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>名称</th>
+                                        <th>内容</th>
+                                        <th>待定</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="first">1</span></td>
+                                        <td>奔驰漏油</td>
+                                        <td><span>**</span></td>
+                                        <td>**</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="second">2</span></td>
+                                        <td>奔驰漏油</td>
+                                        <td><span>**</span></td>
+                                        <td>**</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="third">3</span></td>
+                                        <td>奔驰漏油</td>
+                                        <td><i>**</i></td>
+                                        <td>**</td>
+                                    </tr>
+                                    <tr>
+                                        <td>**</td>
+                                        <td>****</td>
+                                        <td><i>**</i></td>
+                                        <td>**</td>
+                                    </tr>
+                                    <tr>
+                                        <td>**</td>
+                                        <td>****</td>
+                                        <td><span>**</span></td>
+                                        <td>**</td>
+                                    </tr>
+                                    <tr>
+                                        <td>**</td>
+                                        <td>****</td>
+                                        <td><i>**</i></td>
+                                        <td>**</td>
+                                    </tr>
+                                    <tr>
+                                        <td>**</td>
+                                        <td>****</td>
+                                        <td><span>**</span></td>
+                                        <td>**</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--body左侧下部内容end-->
+
+        </div>
+    </div>
+    <!--页面相关js-->
+    <script src="../../dist/layui/layui.js?t=1"></script>
+    <script>
+        layui.config({
+            base: '../../dist/js/' //静态资源所在路径
+        }).extend({
+            index: 'lib/index' //主入口模块
+        }).use(['index', 'console']); //console为echart相关js
+
+    </script>
+</body>
+
+</html>

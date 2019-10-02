@@ -1,1 +1,419 @@
-Hello World
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!--网站标签页标题-->
+    <title>liip法院舆情系统</title>
+
+    <!--网站标签页图标-->
+    <link rel="icon" href="../dist/images/favicon.ico">
+
+    <!--index样式css表-->
+    <link rel="stylesheet" href="../dist/layui/css/layui.css" media="all">
+
+    <!--页面主样式-->
+    <link rel="stylesheet" href="../dist/css/admin.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../dist/font/iconfont.css" />
+
+
+</head>
+
+<body class="layui-layout-body">
+    <div id="LAY_app">
+
+        <!--头部-->
+        <header class="navbar-wrapper">
+            <div class="navbar navbar-fixed-top">
+                <div class="container-fluid cl">
+                    <!--标题-->
+                    <a class="logo navbar-logo f-l mr-10 hidden-xs" href="#">
+                        <img src="../dist/images/logo.jpg" width="50" height="50" style="margin-top: -1px">
+                        liip法院舆情系统
+                    </a>
+
+                    <!--伸缩后标题-->
+                    <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="#">
+                        <img src="../dist/images/logo.jpg" width="40" height="40">
+                        liip法院舆情系统
+                    </a>
+                    <!--标题 end-->
+                    <!--头部右侧 -->
+
+                    <nav id="Hui-userbar" class="nav navbar-nav navbar-userbar hidden-xs">
+
+                        <ul class="layui-nav" style=" background-color:rgba(0,0,0,0);">
+
+                            <li class="layui-nav-item">
+
+                                <a style="color: white;font-size: 20px;margin-top: -5px">
+                                    <img src="../dist/images/face.jpg" class="layui-nav-img">Liip
+                                </a>
+
+                                <dl class="layui-nav-child">
+                                    <dd><a href="javascript:;">修改信息</a></dd>
+                                    <dd><a href="javascript:;">安全管理</a></dd>
+                                    <dd><a href="javascript:;">退出</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                    <!--头部右侧 end-->
+                </div>
+            </div>
+        </header>
+        <!--头部end-->
+
+        <div class="layui-layout layui-layout-admin">
+
+            <!-- 右侧面包屑上部区域 -->
+            <div class="layui-header">
+                <ul class="layui-nav layui-layout-left">
+                    <li class="layui-nav-item layadmin-flexible" lay-unselect>
+                        <a href="javascript:;" layadmin-event="flexible" title="侧边伸缩">
+                            <i class="layui-icon layui-icon-shrink-right" id="LAY_app_flexible"></i>
+                        </a>
+                    </li>
+                    <li class="layui-nav-item" lay-unselect>
+                        <a href="javascript:;" layadmin-event="refresh" title="刷新">
+                            <i class="layui-icon layui-icon-refresh-3"></i>
+                        </a>
+                    </li>
+
+                </ul>
+                <ul class="layui-nav layui-layout-right" lay-filter="layadmin-layout-right">
+
+                    <li class="layui-nav-item layui-hide-xs" lay-unselect>
+                        <a href="javascript:;" layadmin-event="note">
+                            <i class="layui-icon layui-icon-note"></i>
+                        </a>
+                    </li>
+                    <li class="layui-nav-item layui-hide-xs" lay-unselect>
+                        <a href="javascript:;" layadmin-event="fullscreen">
+                            <i class="layui-icon layui-icon-screen-full"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- 右侧面包屑上部区域end -->
+
+            <!-- 右侧面包屑下部区域 -->
+            <div class="layadmin-pagetabs" id="LAY_app_tabs">
+                <div class="layui-icon layadmin-tabs-control layui-icon-prev" layadmin-event="leftPage"></div>
+                <div class="layui-icon layadmin-tabs-control layui-icon-next" layadmin-event="rightPage"></div>
+                <div class="layui-icon layadmin-tabs-control layui-icon-down">
+                    <ul class="layui-nav layadmin-tabs-select" lay-filter="layadmin-pagetabs-nav">
+                        <li class="layui-nav-item" lay-unselect>
+                            <a href="javascript:;"></a>
+                            <dl class="layui-nav-child layui-anim-fadein">
+                                <dd layadmin-event="closeThisTabs"><a href="javascript:;">关闭当前标签页</a></dd>
+                                <dd layadmin-event="closeOtherTabs"><a href="javascript:;">关闭其它标签页</a></dd>
+                                <dd layadmin-event="closeAllTabs"><a href="javascript:;">关闭全部标签页</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <div class="layui-tab" lay-unauto lay-allowClose="true" lay-filter="layadmin-layout-tabs">
+                    <ul class="layui-tab-title" id="LAY_app_tabsheader">
+                        <li lay-id="home/console.html" lay-attr="home/console.html" class="layui-this"><i class="layui-icon layui-icon-home"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 右侧面包屑下部区域 end -->
+            <!-- 侧边菜单 -->
+            <div class="layui-side layui-side-menu">
+                <div class="layui-side-scroll">
+
+                    <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">
+
+                        <!-- 首页 -->
+                        <li data-name="home" class="layui-nav-item layui-nav-itemed">
+
+                            <a href="javascript:;" lay-href="home/console.html" lay-tips="首页" lay-direction="2">
+                                <i class="layui-icon layui-icon-home" style="color: black;font-weight: bold;"></i>
+                                <cite>首页</cite>
+                            </a>
+
+                        </li>
+
+                        <!-- 舆情大屏 -->
+                        <li data-name="yqdp" class="layui-nav-item" lay-tips="舆情大屏" lay-direction="2">
+                            <a href="yqdp/index.html" target="_black">
+                                <i class="layui-icon layui-icon-chart-screen" style="color: black;font-weight: bold;"> </i>
+                                <cite>舆情大屏</cite>
+                            </a>
+                        </li>
+
+
+                        <!-- 案件管理 -->
+                        <li data-name="ajgl" class="layui-nav-item">
+
+                            <a href="javascript:;" lay-tips="案件管理" lay-direction="2">
+                                <i class="layui-icon layui-icon-read" style="color: black;font-weight: bold;"></i>
+                                <cite>案件管理</cite>
+                            </a>
+
+                            <dl class="layui-nav-child">
+
+                                <dd data-name="ajsz">
+                                    <a lay-href="ajgl/ajsz/ajgl.html">案件设置</a>
+                                </dd>
+
+                                <dd data-name="jcczsz">
+                                    <a lay-href="ajgl/jcczsz/jcczsz.html">监测词组设置</a>
+                                </dd>
+
+                            </dl>
+                        </li>
+
+                        <!-- 案件相关舆情 -->
+                        <li data-name="ajxgyq" class="layui-nav-item">
+
+                            <a href="javascript:;" lay-tips="案件相关舆情" lay-direction="2">
+                                <i class="layui-icon layui-icon-senior" style="color: black;font-weight: bold;"></i>
+                                <cite>案件相关舆情</cite>
+                            </a>
+
+                            <dl class="layui-nav-child">
+
+                                <dd data-name="xgyq">
+                                    <a lay-href="ajxgyq/xgyq/xgyq.html">案件相关舆情</a>
+                                </dd>
+                                <dd data-name="yqtj">
+                                    <a lay-href="ajxgyq/ajyqtj/yqtj.html">案件舆情统计</a>
+                                </dd>
+                                <dd data-name="htfx">
+                                    <a lay-href="ajxx1/ajhtx.html">案件话题分析</a>
+                                </dd>
+
+                            </dl>
+
+                        </li>
+                        <!-- 案件舆情报告生成 -->
+                        <li data-name="yqbg" class="layui-nav-item">
+
+                            <a href="javascript:;" lay-tips="案件舆情报告生成" lay-direction="2">
+                                <i class="layui-icon layui-icon-form" style="color: black;font-weight: bold;"></i>
+                                <cite>案件舆情报告</cite>
+                            </a>
+
+                            <dl class="layui-nav-child">
+
+                                <dd data-name="bg">
+                                    <a lay-href="yqbg/index.html">案件舆情报告生成</a>
+                                </dd>
+
+
+                            </dl>
+                        </li>
+                        <!-- 案件舆情态势分析及处置 -->
+                        <li data-name="tsfx" class="layui-nav-item">
+
+                            <a href="javascript:;" lay-tips="案件舆情态势分析及处置" lay-direction="2">
+
+                                <i class="layui-icon layui-icon-chart" style="color: black;font-weight: bold;"></i>
+                                <cite>案件舆情态势</cite>
+
+                            </a>
+
+                            <dl class="layui-nav-child">
+
+                                <dd data-name="tsfx">
+                                    <a lay-href="ajxx/newsList.html">案件舆情态势分析</a>
+                                </dd>
+                                <dd data-name="czfa">
+                                    <a lay-href="ajxx1/ajxx.html">案件舆情处置方案</a>
+                                </dd>
+
+                            </dl>
+                        </li>
+                        <!-- 案件舆情处置方案 -->
+                        <li data-name="yqczfa" class="layui-nav-item">
+
+                            <a href="javascript:;" lay-tips="案件舆情处置方案" lay-direction="2">
+                                <i class="layui-icon layui-icon-util" style="color: black;font-weight: bold;"></i>
+                                <cite>案件舆情处置方案</cite>
+                            </a>
+
+                            <dl class="layui-nav-child">
+
+                                <dd data-name="tsfx">
+                                    <a lay-href="ajxx/newsList.html">案件舆情态势分析</a>
+                                </dd>
+                                <dd data-name="czfa">
+                                    <a lay-href="ajxx1/ajxx.html">案件舆情处置方案</a>
+                                </dd>
+
+                            </dl>
+                        </li>
+                        <!-- 舆情预警 -->
+                        <!--
+                        <li data-name="template" class="layui-nav-item">
+                            <a href="javascript:;" lay-tips="舆情预警" lay-direction="2" style="color: black">
+                                <i class="layui-icon layui-icon-fire" style="color: black"></i>
+                                <cite style="color: black">舆情预警</cite>
+                            </a>
+                            <dl class="layui-nav-child">
+
+                                <dd><a lay-href="template/caller.html" style="color: black">敏感信息</a></dd>
+                                <dd><a lay-href="template/goodslist.html" style="color: black">负面信息</a></dd>
+
+                                <dd><a href="user/reg.html" target="_blank" style="color: black">用户关注</a></dd>
+
+                            </dl>
+                        </li>
+                        -->
+                        <!-- 网络热点 -->
+                        <!--
+                        <li data-name="template" class="layui-nav-item">
+                            <a href="javascript:;" lay-tips="网络热点" lay-direction="2" style="color: black">
+                                <i class="layui-icon layui-icon-fire" style="color: black"></i>
+                                <cite>网络热点</cite>
+                            </a>
+                            <dl class="layui-nav-child">
+
+                                <dd><a lay-href="template/caller.html" style="color: black">全部舆情</a></dd>
+                                <dd><a lay-href="template/caller.html" style="color: black">热点话题</a></dd>
+                                <dd><a lay-href="template/goodslist.html" style="color: black">事件追踪</a></dd>
+                                <dd><a lay-href="template/msgboard.html" style="color: black">领导舆情</a></dd>
+                                <dd><a href="user/reg.html" target="_blank" style="color: black">专题信息</a></dd>
+
+                            </dl>
+                        </li>
+                         -->
+                        <!-- 舆情监测 -->
+                        <li data-name="yqjc" class="layui-nav-item">
+
+                            <a href="javascript:;" lay-tips="舆情监测" lay-direction="2">
+                                <i class="layui-icon layui-icon-component" style="color: black;font-weight: bold;"></i>
+                                <cite>舆情监测</cite>
+                            </a>
+
+                            <dl class="layui-nav-child">
+                                <dd>
+                                    <a lay-href="app/message/index.html">舆情统计</a>
+                                </dd>
+                                <dd>
+                                    <a lay-href="app/message/index.html">活跃媒体</a>
+                                </dd>
+
+                                <dd>
+                                    <a lay-href="app/message/index.html">情感分布</a>
+                                </dd>
+
+                            </dl>
+                        </li>
+
+                        <!-- 舆情检索 -->
+                        <li data-name="yqjs" class="layui-nav-item">
+
+                            <a href="javascript:;" lay-tips="舆情检索" lay-direction="2">
+                                <i class="layui-icon layui-icon-search" style="color: black;font-weight: bold;"></i>
+                                <cite>舆情检索</cite>
+                            </a>
+
+                            <dl class="layui-nav-child">
+
+                                <dd>
+                                    <a lay-href="yqjs/search_gjc.html">关键词检索</a>
+                                </dd>
+                                <dd>
+                                    <a lay-href="yqjs/search_gj.html">高级检索</a>
+                                </dd>
+
+                            </dl>
+                        </li>
+
+                        <!-- 系统设置 -->
+                        <li data-name="set" class="layui-nav-item">
+                            <a href="javascript:;" lay-tips="系统设置" lay-direction="2">
+                                <i class="layui-icon layui-icon-set" style="color: black;font-weight: bold;"></i>
+                                <cite>系统设置</cite>
+                            </a>
+                            <dl class="layui-nav-child">
+                                <!--
+                                    <dd class="layui-nav-itemed">
+                                    <a href="javascript:;">单位信息</a>
+                                </dd>
+
+                                <dd><a lay-href="set/user/info.html">用户管理</a></dd>
+                                <dd><a lay-href="set/user/info.html">敏感信息</a></dd>
+                                <dd><a lay-href="set/user/info.html">监测网站</a></dd>
+                                <dd><a lay-href="set/user/info.html">领导信息</a></dd>
+                                -->
+                                <dd><a lay-href="set/user/info.html">处置方案设置</a></dd>
+                                <dd><a lay-href="set/user/info.html">舆情案件相关性分析</a></dd>
+                                <dd><a lay-href="set/user/info.html">舆情案件相关性解析</a></dd>
+                                <dd><a lay-href="set/user/info.html">法院监测词组设置</a></dd>
+
+                            </dl>
+
+                        </li>
+
+                        <!-- 其他页面 -->
+                        <li data-name="qtym" class="layui-nav-item">
+                            <a href="javascript:;" lay-tips="其他页面" lay-direction="2">
+
+                                <i class="layui-icon layui-icon-template" style="color: black;font-weight: bold;"></i>
+                                <cite>其他页面</cite>
+
+                            </a>
+
+                            <dl class="layui-nav-child">
+
+                                <dd><a lay-href="qtym/login/login1.html" style="color: black">login1</a></dd>
+                                <dd><a lay-href="qtym/login/login2.html" style="color: black">login2</a></dd>
+                                <dd><a lay-href="qtym/login/login3.html" style="color: black">login3</a></dd>
+                                <dd><a lay-href="qtym/500/500.html" style="color: black">500</a></dd>
+                                <dd><a lay-href="qtym/404/404-2.html" style="color: black">404-2</a></dd>
+                                <dd><a lay-href="qtym/404/404-3.html" style="color: black">404-3</a></dd>
+                                <dd><a lay-href="qtym/404/404-4.html" style="color: black">404-4</a></dd>
+                                <dd><a lay-href="qtym/404/404-5.html" style="color: black">404-5</a></dd>
+                                <dd><a lay-href="qtym/weihu/weihu.html" style="color: black">维护</a></dd>
+                            </dl>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+            <!-- 侧边菜单end -->
+
+
+            <!-- 主体内容 -->
+            <div class="layui-body" id="LAY_app_body">
+                <div class="layadmin-tabsbody-item layui-show">
+                    <iframe src="home/console.html" frameborder="0" class="layadmin-iframe"></iframe>
+                </div>
+            </div>
+            <!-- 主体内容end-->
+
+            <!-- 辅助元素，一般用于移动设备下遮罩 -->
+            <div class="layadmin-body-shade" layadmin-event="shade"></div>
+        </div>
+    </div>
+
+    <!-- 相关js文件 -->
+
+    <script src="../dist/layui/layui.js"></script>
+    <script>
+        layui.config({
+            base: '../dist/js/' //静态资源所在路径
+        }).extend({
+            index: 'lib/index' //主入口模块
+        }).use('index');
+
+    </script>
+
+</body>
+
+</html>
